@@ -1,45 +1,45 @@
---users--
+--users-- //kullanıcılar-base table
 *id
 *email(unique)
 *password
 
---candidates--
+--candidates-- //iş arayanlar
 *id(user)
 *first_name
 *last_name
-*identity_number(unique)
-*birth_date
+*national_identity(unique)
+*birthdate
 
---employers--
+--employers-- //iş verenler
 *id(user)
 *company_name
 *web_adress
 *phone_number
 
---employees--
+--employees-- //sistem personeli(kariyernet personeli)
 *id(user)
 *first_name
 *last_name
 
---job_positions--
+--job_positions-- //iş alanları - sowtfare developer
 *id
 *position(unique)
 
---activation_codes--
+--activation_codes-- //aktivasyon kodları
 *id
 *activation_code
 *is_confirmed
-*confirm_date**
+*confirm_date**(bu hariç hepsi)
 
---activation_code_candidates--
-*id(actcode)
+--activation_code_candidates--//iş arayan aktivasyon kodları
+*id(actvcode)
 *candidate_user_id
 
---activation_code_employers--
-*id(actcode)
+--activation_code_employers-- //iş veren aktivasyon kodları
+*id(actvcode)
 *employers_user_id
 
---employers_activation_by_employees--
+--employers_activation_by_employees--//"E-posta doğrulaması sonrası HRMS personelinin onayı gerekmektedir." açıklamasının karşılığı olan tablo
 *id
 *employers_id
 *employees_id
