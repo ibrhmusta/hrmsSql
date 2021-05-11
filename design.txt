@@ -4,7 +4,7 @@
 *password
 
 --candidates-- //iş arayanlar
-*id(user)
+*user_id(user)
 *first_name
 *last_name
 *national_identity(unique)
@@ -29,19 +29,19 @@
 *id
 *activation_code
 *is_confirmed
-*confirm_date**(bu hariç hepsi)
+*confirm_date**(bu hariç hepsi not null)
 
 --activation_code_candidates--//iş arayan aktivasyon kodları
 *id(actvcode)
-*candidate_user_id
+*candidate(id)
 
 --activation_code_employers-- //iş veren aktivasyon kodları
 *id(actvcode)
-*employers_user_id
+*employers(id)
 
 --employers_activation_by_employees--//"E-posta doğrulaması sonrası HRMS personelinin onayı gerekmektedir." açıklamasının karşılığı olan tablo
 *id
-*employers_id
-*employees_id
+*employers_id(employersdan gelen id)
+*employees_id(employeesdan gelen id)
 *is_confirmed
 *confirmed_date
