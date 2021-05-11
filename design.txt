@@ -3,20 +3,20 @@
 *email(unique)
 *password
 
---candidates-- //iş arayanlar
+--candidates-- //iş arayanlar*************
 *user_id(user)
 *first_name
 *last_name
 *national_identity(unique)
 *birthdate
 
---employers-- //iş verenler
+--employers-- //iş verenler**************
 *id(user)
 *company_name
 *web_adress
 *phone_number
 
---employees-- //sistem personeli(kariyernet personeli)
+--employees-- //sistem personeli(kariyernet personeli)**************               ******************olanlar auto increment değil(identity yok)
 *id(user)
 *first_name
 *last_name
@@ -31,11 +31,11 @@
 *is_confirmed
 *confirm_date**(bu hariç hepsi not null)
 
---activation_code_candidates--//iş arayan aktivasyon kodları
+--activation_code_candidates--//iş arayan aktivasyon kodları*********
 *id(actvcode)
 *candidate(id)
 
---activation_code_employers-- //iş veren aktivasyon kodları
+--activation_code_employers-- //iş veren aktivasyon kodları************
 *id(actvcode)
 *employers(id)
 
