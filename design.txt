@@ -27,17 +27,11 @@
 
 --activation_codes-- //aktivasyon kodları
 *id
+*user_id
 *activation_code
 *is_confirmed
 *confirm_date**(bu hariç hepsi not null)
 
---activation_code_candidates--//iş arayan aktivasyon kodları*********
-*id(actvcode)
-*candidate(id)
-
---activation_code_employers-- //iş veren aktivasyon kodları************
-*id(actvcode)
-*employers(id)
 
 --employers_activation_by_employees--//"E-posta doğrulaması sonrası HRMS personelinin onayı gerekmektedir." açıklamasının karşılığı olan tablo
 *id
