@@ -4,7 +4,7 @@
 *password
 
 --candidates-- //iş arayanlar*************
-*user_id(user)
+*id(user)
 *first_name
 *last_name
 *national_identity(unique)
@@ -23,7 +23,7 @@
 
 --job_positions-- //iş alanları - sowtfare developer
 *id
-*position(unique)
+*title(unique)
 
 --activation_codes-- //aktivasyon kodları
 *id
