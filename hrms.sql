@@ -84,36 +84,36 @@ CREATE TABLE public.users
 ALTER TABLE public.activation_codes
     ADD FOREIGN KEY (user_id)
     REFERENCES public.users (id)
-    NOT VALID;
+    
 
 
 ALTER TABLE public.candidates
     ADD FOREIGN KEY (id)
     REFERENCES public.users (id)
-    NOT VALID;
+    
 
 
 ALTER TABLE public.employees
     ADD FOREIGN KEY (id)
     REFERENCES public.users (id)
-    NOT VALID;
+    
 
 
 ALTER TABLE public.employers
     ADD FOREIGN KEY (id)
     REFERENCES public.users (id)
-    NOT VALID;
+    
 
 
 ALTER TABLE public.employers_activation_by_employees
     ADD FOREIGN KEY (employee_id)
     REFERENCES public.employees (id)
-    NOT VALID;
+    
 
 
 ALTER TABLE public.employers_activation_by_employees
     ADD FOREIGN KEY (employer_id)
     REFERENCES public.employers (id)
-    NOT VALID;
+    
 
 END;
